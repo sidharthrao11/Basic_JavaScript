@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function in jS</title>
+</head>
+<body>
+    <h1>Functions in JS</h1>
+    <p>FUNCTIONS : function is a block of code which is designed to perform a pereticular task. <br> <br> <br>
+       SYNTAX : function function_name () { <br>
+                  code here ... <br>
+                } <br>
+    </p>
+
+
+    <script>
+        //function in js :-
+        console.log('Hello World')
+
+        //Syntax :-
+       // function f_name(parameters) {  =>declairation of function
+       //     code to be executed        =>code 
+      //  }
+      
+      //f_name()                         => for calling the function
+
+
+      //Example :- 
+      function greet() {
+        console.log("Hello, How are you?");
+      }
+      greet()
+
+      //Function with Parameters and Arguments :- while declairing a function we pass some parameters 
+      //                                          in the paranthesis(para1, para2) 
+      function twoNumber(a,b) {      
+           console.log(a + b);
+           console.log(a-b);
+           console.log(a*b);
+           console.log(a/b);
+      }   
+      twoNumber(10, 20)  //while calling the function we pass some arguments in the parenthesis (args1 , args2)
+    
+      //function return
+       function hey(){
+        console.log('before');
+        return console.log('hello world');
+        console.log('after'); // => won't execute any code after return statement.
+    }
+       hey()
+
+    </script>
+</body>
+</html>

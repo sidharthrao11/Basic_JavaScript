@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+
+<link rel="stylesheet" href="./index.css" />
+
+<style>
+    .container{
+        width: 30%;
+        height: 400px;
+        border: 5px solid black;
+        border-radius: 10px;
+        background-color: rgb(60, 60, 60);
+        margin-left: 150px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+    }
+    .num1{
+       border: 3px solid black;
+       background-color: rgb(243, 225, 192);
+       padding: 10px;
+       margin-left: 32px;
+    }
+    .num2{
+       border: 3px solid black;
+       background-color: rgb(243, 225, 192);
+       padding: 10px;
+       margin-left: 32px;
+       margin-top: 10px;
+    }
+    h2{
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 30px;
+    }
+    #add{
+        border: 3px solid black;
+        border-radius: 10px;
+        background-color: rgba(221, 221, 79, 0.842);
+        padding: 10px;
+        margin-left: 180px;
+        margin-top: 10px;
+    }
+    #sub{
+        border: 3px solid black;
+        border-radius: 10px;
+        background-color: rgba(221, 221, 79, 0.842);
+        padding: 10px;
+        margin-top: 10px;
+    }
+    #mult{
+        border: 3px solid black;
+        border-radius: 10px;
+        background-color: rgba(221, 221, 79, 0.842);
+        padding: 10px;
+        margin-top: 10px;
+    }
+    #div{
+        border: 3px solid black;
+        border-radius: 10px;
+        background-color: rgba(221, 221, 79, 0.842);
+        padding: 10px;
+        margin-top: 10px;
+    }
+    .no{
+        margin-left: 50px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 25px;
+        color: rgba(68, 68, 234, 0.805);
+    
+    }
+    .result{
+        border: 3px solid black;
+        background-color: rgb(243, 225, 192);
+      padding: 10px;
+      margin-left: 36px;
+      margin-top: 10px;
+    }
+</style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Calculator</h2>
+      <br />
+      <label class="no" for="">Num1 :</label>
+      <input class="num1" type="number" placeholder="num1" id="num1" /><br />
+      <label class="no" for="">Num2 :</label>
+      <input class="num2" type="number" placeholder="num2" id="num2" /><br />
+      <button id="add">+</button>
+      <button id="sub">-</button>
+      <button id="mult">*</button>
+      <button id="div">/</button><br />
+      <label class="no" for="">Result:</label>
+      <input class="result" type="number" placeholder="result" readonly id="result" />
+    </div>
+
+    <script>
+      var n1 = document.getElementById("num1");
+      var n2 = document.getElementById("num2");
+      var result = document.getElementById("result");
+
+      document.getElementById("add").addEventListener("click", function () {
+        result.value = parseInt(n1.value) + parseInt(n2.value);
+      });
+      document.getElementById("sub").addEventListener("click", function () {
+        result.value = parseInt(n1.value) - parseInt(n2.value);
+      });
+      document.getElementById("mult").addEventListener("click", function () {
+        result.value = parseInt(n1.value) * parseInt(n2.value);
+      });
+      document.getElementById("div").addEventListener("click", function () {
+        result.value = parseInt(n1.value) / parseInt(n2.value);
+      });
+    </script>
+  </body>
+</html>
