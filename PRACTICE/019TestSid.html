@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para" class="p1" name="p1" title="Paragraph">
+    orem ipsum dolor sit amet consectetur,
+        adipisicing elit. Dicta voluptate officia
+        perspiciatis consequuntur iste nam alias
+        neque saepe sapiente architecto accusamus
+        vero sint deleniti, tempora aliquid. 
+        Deleniti tempore aperiam eligendi.</p>
+
+        <button onclick="hidePara()">Hide</button>
+        <button onclick="showPara()">Show</button>
+        <button id="hide" onclick="toggle()">Hide</button>
+
+<script>
+    p_tag = document.querySelector('#para')
+
+
+    function hidePara()
+    {
+        p_tag.style.display = "none";
+    }
+
+
+    function showPara()
+    {
+       p_tag.style.display = "block";
+    }
+
+    
+    let a = document.getElementById('hide')
+
+    function toggle()
+     {
+        if(p_tag.style.display == "none")
+         {
+           p_tag.style.display = "block"
+           a.innerHTML="hide"
+         }
+         else
+          {
+            p_tag.style.display="none"
+            a.innerHTML ="show"
+          }
+     }
+
+    </script>        
+</body>
+</html>
